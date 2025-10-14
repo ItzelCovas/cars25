@@ -4,7 +4,10 @@ using StaticArrays: SVector
 @agent struct Car(ContinuousAgent{2,Float64})
 end
 
-function agent_step!(agent, model)
+function agent_step!(agent, model) # 
+    if agent.id == 1
+        println("Agent 1 at position: ", agent.pos)
+    end
     move_agent!(agent, model, 1.0)
 end
 
