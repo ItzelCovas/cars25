@@ -58,7 +58,7 @@ export default function App() {
       {/* <image x={0} y={240} href="./racing-car.png"/> */}
       {
         cars.map(car =>
-          <image id={car.id} x={car.pos[0]*32} y={240} width={32} href="./racing-car.png"/>
+          <image id={car.id} x={car.pos[0]*32} y={240} width={32} href={car.id==1?"dark-racing-car.png":"./racing-car.png"}/>
         )
       }
       </svg>
